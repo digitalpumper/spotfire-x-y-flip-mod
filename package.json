@@ -4,7 +4,7 @@
     "type": "module",
 "scripts": {
   "postinstall": "chmod +x node_modules/.bin/mods-sdk",
-  "build": "npx mods-sdk build",
+  "build": "chmod +x node_modules/.bin/mods-sdk && npx mods-sdk build",
   "build:dev": "npx mods-sdk build --watch --debug",
   "tsc:dev": "tsc --watch",
   "server": "npx mods-dev-server",
