@@ -1,13 +1,9 @@
 {
     "compilerOptions": {
-        "rootDir": "src",
-        "outDir": "build",
-        "lib": ["DOM", "ES2022"],
-        "target": "ES2022",
-        "skipLibCheck": true,
-        "strict": true,
-        "noEmit": true,
-        "allowUmdGlobalAccess": true,
-        "moduleResolution": "Bundler"
-    }
+        "allowJs": true,
+        "outDir": "",
+        "target": "ES2019",
+        "lib": ["es2019", "dom"]
+    },
+    "include": ["./src/**/*.js", "./spotfire/*.d.ts", "./src/**/*.d.ts", "./node_modules/**/*.d.ts"]
 }

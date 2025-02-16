@@ -1,42 +1,26 @@
-# My Visualization Mod
+# Area Chart
 
-Here you should add some information about the visualization mod.
+This is a complex mod example demonstrating an area chart rendered with `d3` and bundled with `Webpack`.
 
-## Getting started
+All source code for the mod example can be found in the `src` folder. Other necessary files reside in the `static` folder. Read below for further explanation.
 
-To develop you need to have [Node.js](https://nodejs.org/en) installed.
-The recommended IDE for developing Spotfire mods is [Visual Studio Code](https://code.visualstudio.com/).
+## Prerequisites
 
-Before you can start developing run the following commands in this folder:
+These instructions assume that you have [Node.js](https://nodejs.org/en/) (which includes npm) installed.
 
-```sh
-npm install # Install dependencies.
-npm run build # Builds the mod and generates types from the manifest.
-```
+## How to get started (with development server)
 
-Open this folder in Visual Studio Code and run the default build task, either by pressing "Ctrl + Shift + B" or by running the "Start watchers" task.
-This will launch three watchers:
-- the [TypeScript](https://www.typescriptlang.org/) typechecker, which makes sure you are using the API in a type-safe manner.
-- a build watcher, which automatically bundles the TypeScript file found in the `src/main.ts` folder into a JavaScript file which is put in the `build` folder.
-- the mods development server, which serves the mod files and mod manifest to Spotfire during development.
-Your mod will be rebuilt when any TypeScript file is changed or when the mod manifest changes.
+- Open a terminal at the location of this example.
+- Run `npm install`. This will install necessary tools. Run this command only the first time you are building the mod and skip this step for any subsequent builds.
+- Run `npm start`. This will bundle the JavaScript and place it in the `dist` folder. This task will watch for changes in the code and will continue running until it is stopped. Whenever you save a file, the changes will be reflected in the visualization mod.
+- Run `npm run server` in a separate terminal. This will start a development server.
+- Start editing, for example `src/index.js`.
+- In Spotfire, follow the steps of creating a new mod and connecting to the development server.
 
-To build outside of Visual Studio Code run:
+## Working without a development server
 
-```sh
-npm run build # Builds a minimized version of the mod.
-npm run build:dev # Starts a file watcher and builds an unminimized version of the mod, including source maps.
-```
-
-In this template you will find the following files and directories:
-
-File/Directory Name | Explanation
----|---
-index.html|The main entry point of the mod. Contains a static script to load the API. The HEAD tag should contain the required `script` and `style` elements.
-main.css|Optional static styles.
-src/|Contains all TypeScript source files.
-build/|Contains the bundled result (and possibly source maps) for the TypeScript code. This is the file that should be refered to from the mod manifest file and index.html.
-.vscode/|Contains files which make the development experience in Visual Studio Code seamless. This includes development tasks, debugging configuration, and IntelliSense support for the mods JSON schema.
-mod-manifest.json|For more information on the manifest file see the documentation website.
-package.json|Defines the npm dependencies of your project as well as a set of scripts used during development.
-tsconfig.json|Contains the TypeScript configuration for this project.
+- Open a terminal at the location of this example.
+- Run `npm install`. This will install necessary tools. Run this command only the first time you are building the mod and skip this step for any subsequent builds.
+- Run `npm run build`. This will bundle the JavaScript and place it in the `dist` folder. It also copies the contents of `static` into `dist`. This task will not watch for changes in the code.
+- In Spotfire, follow the steps of creating a new mod and then browse for, and point to, the _manifest_ in the `dist` folder.
+  
