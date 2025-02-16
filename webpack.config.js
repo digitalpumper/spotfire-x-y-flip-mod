@@ -39,7 +39,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new CopyPlugin({ patterns: [{ from: "static" }] })
+        new CopyPlugin({
+            patterns: [
+                { from: "static", to: "." }
+            ]
+        })
     ],
     devtool: "inline-source-map"
 };
+
