@@ -3,12 +3,11 @@
     "version": "1.0.0",
     "type": "module",
 "scripts": {
-  "postinstall": "chmod +x node_modules/.bin/mods-sdk",
   "build": "chmod +x node_modules/.bin/mods-sdk && npx mods-sdk build",
   "build:dev": "npx mods-sdk build --watch --debug",
   "tsc:dev": "tsc --watch",
-  "server": "npx mods-dev-server",
-  "start": "chmod +x node_modules/.bin/mods-dev-server && npx mods-dev-server"
+  "server": "chmod +x node_modules/.bin/mods-dev-server && npx mods-dev-server --no-open",
+  "start": "chmod +x node_modules/.bin/mods-dev-server && npx mods-dev-server --no-open"
 },
     "devDependencies": {
       "@spotfire/mods-api": "~1.3.0",
