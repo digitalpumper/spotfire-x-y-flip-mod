@@ -2,13 +2,14 @@
     "name": "my-visualization-mod",
     "version": "1.0.0",
     "type": "module",
-    "scripts": {
-      "build": "npx mods-sdk build",
-      "build:dev": "npx mods-sdk build --watch --debug",
-      "tsc:dev": "tsc --watch",
-      "server": "npx mods-dev-server",
-      "start": "npx mods-dev-server"
-    },
+"scripts": {
+  "postinstall": "chmod +x node_modules/.bin/mods-sdk",
+  "build": "npx mods-sdk build",
+  "build:dev": "npx mods-sdk build --watch --debug",
+  "tsc:dev": "tsc --watch",
+  "server": "npx mods-dev-server",
+  "start": "npx mods-dev-server"
+},
     "devDependencies": {
       "@spotfire/mods-api": "~1.3.0",
       "@spotfire/mods-dev-server": "^1.1.0",
